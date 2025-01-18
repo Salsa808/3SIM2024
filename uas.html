@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form, Tabel, dan JavaScript</title>
+    <style>
+        /* CSS untuk Form */
+        form {
+            margin-bottom: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        form input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        /* CSS untuk Tombol */
+        button {
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: green;
+        }
+
+        /* CSS untuk Tabel */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            text-align: left;
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Form Pendaftaran -->
+    <h2>Form Pendaftaran</h2>
+    <form action="#" method="POST">
+        <label for="name">Nama:</label>
+        <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Masukkan email Anda" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Masukkan password" minlength="6" required>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <!-- Tabel Daftar Produk -->
+    <h2>Daftar Produk</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Nama Produk</th>
+                <th>Harga</th>
+                <th>Ketersediaan Stok</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Produk A</td>
+                <td>Rp 50.000</td>
+                <td>Tersedia</td>
+            </tr>
+            <tr>
+                <td>Produk B</td>
+                <td>Rp 75.000</td>
+                <td>Tidak Tersedia</td>
+            </tr>
+            <tr>
+                <td>Produk C</td>
+                <td>Rp 100.000</td>
+                <td>Tersedia</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Tombol Pesan Selamat Datang -->
+    <button id="welcomeButton">Klik Saya</button>
+
+    <script>
+        // Fungsi untuk menampilkan pesan
+        function tampilkanPesan() {
+            alert("Selamat Datang!");
+        }
+
+        // Menghubungkan tombol dengan fungsi
+        document.getElementById("welcomeButton").addEventListener("click", tampilkanPesan);
+    </script>
+</body>
+</html>
